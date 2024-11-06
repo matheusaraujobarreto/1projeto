@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://dg2s5g7vokqxk"]
+
+[ext_resource type="Script" path="res://loading.gd" id="1_u405m"]
+[ext_resource type="Texture2D" uid="uid://ddy2gubrt68jc" path="res://art/Background Screen.png" id="2_hdmqr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b57bm"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u405m")
+
+[node name="BackgroundScreen" type="Sprite2D" parent="."]
+position = Vector2(574.558, 324)
+scale = Vector2(0.600937, 0.6)
+texture = ExtResource("2_hdmqr")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+modulate = Color(0.3588, 0.92, 0.72358, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.096
+anchor_top = 0.41
+anchor_right = 0.921
+anchor_bottom = 0.56
+offset_left = 0.407997
+offset_top = 0.319977
+offset_right = 0.00793457
+offset_bottom = 0.119995
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.347
+anchor_top = 0.213
+anchor_right = 0.627
+anchor_bottom = 0.377
+offset_left = 0.255981
+offset_top = -0.0240021
+offset_right = -0.304016
+offset_bottom = -0.296005
+text = "Carrregando..."
+label_settings = SubResource("LabelSettings_b57bm")
+horizontal_alignment = 1
+vertical_alignment = 1

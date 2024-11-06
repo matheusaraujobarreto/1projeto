@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=3 uid="uid://duat1woi3ixk7"]
+
+[ext_resource type="Texture2D" uid="uid://dyn057pb1av1a" path="res://art/Start Screen.png" id="1_eylo8"]
+[ext_resource type="Texture2D" uid="uid://cip2f3wvncohv" path="res://art/Menu Buttons/Large Buttons/Large Buttons/Controls Button.png" id="2_gobcp"]
+[ext_resource type="Script" path="res://play_button.gd" id="3_4q2wf"]
+[ext_resource type="Texture2D" uid="uid://j8qll8n5idyt" path="res://art/Menu Buttons/Large Buttons/Large Buttons/Exit Button.png" id="3_8h1ep"]
+[ext_resource type="Texture2D" uid="uid://dymn558rga5w4" path="res://art/Menu Buttons/Large Buttons/Large Buttons/Play Button.png" id="4_54h4r"]
+[ext_resource type="Script" path="res://controles_button.gd" id="5_32gnm"]
+[ext_resource type="Script" path="res://quit_button.gd" id="7_xvmdt"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchor_right = 1.00154
+anchor_bottom = 0.999506
+offset_right = 0.223877
+offset_bottom = 0.319946
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="StartScreen" type="Sprite2D" parent="."]
+position = Vector2(577.136, 324)
+scale = Vector2(0.600662, 0.6)
+texture = ExtResource("1_eylo8")
+
+[node name="PlayButton" type="Sprite2D" parent="."]
+position = Vector2(600, 410)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_54h4r")
+
+[node name="Button" type="Button" parent="PlayButton"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -100.0
+offset_right = -300.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+flat = true
+script = ExtResource("3_4q2wf")
+
+[node name="ControlsButton" type="Sprite2D" parent="."]
+position = Vector2(600, 500)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_gobcp")
+
+[node name="Button" type="Button" parent="ControlsButton"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -100.0
+offset_right = -300.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+flat = true
+script = ExtResource("5_32gnm")
+
+[node name="ExitButton" type="Sprite2D" parent="."]
+position = Vector2(600, 590)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_8h1ep")
+
+[node name="Button" type="Button" parent="ExitButton"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -100.0
+offset_right = -300.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+flat = true
+script = ExtResource("7_xvmdt")
+
+[connection signal="pressed" from="PlayButton/Button" to="PlayButton/Button" method="_on_pressed"]
+[connection signal="pressed" from="ControlsButton/Button" to="ControlsButton/Button" method="_on_pressed"]
+[connection signal="pressed" from="ExitButton/Button" to="PlayButton/Button" method="_on_button_pressed"]
+[connection signal="pressed" from="ExitButton/Button" to="ExitButton/Button" method="_on_pressed"]

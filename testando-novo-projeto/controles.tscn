@@ -1,0 +1,122 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1iagwauw1lxb"]
+
+[ext_resource type="Texture2D" uid="uid://ddy2gubrt68jc" path="res://art/Background Screen.png" id="1_nh2mt"]
+[ext_resource type="Texture2D" uid="uid://bh644vvghqms2" path="res://art/Menu Buttons/Square Buttons/Square Buttons/Back Square Button.png" id="2_jn3kd"]
+[ext_resource type="Script" path="res://voltar_button.gd" id="3_7we60"]
+[ext_resource type="Texture2D" uid="uid://bf8s5eelcsbwn" path="res://art/Menu Buttons/Square Buttons/Square Buttons/Audio Square Button.png" id="3_fkuk7"]
+[ext_resource type="Texture2D" uid="uid://dwxeg5we74mn1" path="res://art/Menu Buttons/Square Buttons/Square Buttons/Music Square Button.png" id="4_2qmm7"]
+[ext_resource type="Texture2D" uid="uid://yw6nj0mksipn" path="res://art/Menu Buttons/Square Buttons/Square Buttons/V Square Button.png" id="5_327lw"]
+[ext_resource type="Script" path="res://aplicar_button.gd" id="7_v3pb3"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchor_right = 1.667
+anchor_bottom = 1.667
+offset_right = -768.384
+offset_bottom = -432.216
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundScreen" type="Sprite2D" parent="."]
+position = Vector2(576, 329.5)
+scale = Vector2(0.6, 0.610185)
+texture = ExtResource("1_nh2mt")
+
+[node name="BackSquareButton" type="Sprite2D" parent="."]
+top_level = true
+position = Vector2(120, 120)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("2_jn3kd")
+
+[node name="Button" type="Button" parent="BackSquareButton"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+flat = true
+script = ExtResource("3_7we60")
+
+[node name="AudioSquareButton" type="Sprite2D" parent="."]
+top_level = true
+position = Vector2(150, 290)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("3_fkuk7")
+
+[node name="HSlider" type="HSlider" parent="AudioSquareButton"]
+anchors_preset = -1
+anchor_left = 1.465
+anchor_top = -0.025
+anchor_right = 4.705
+anchor_bottom = 0.975
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -424.0
+offset_bottom = -200.0
+scale = Vector2(2, 2)
+mouse_default_cursor_shape = 10
+value = 50.0
+
+[node name="MusicSquareButton" type="Sprite2D" parent="."]
+top_level = true
+position = Vector2(150, 460)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("4_2qmm7")
+
+[node name="HSlider" type="HSlider" parent="MusicSquareButton"]
+anchors_preset = -1
+anchor_left = 1.465
+anchor_top = -0.025
+anchor_right = 4.705
+anchor_bottom = 0.975
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -424.0
+offset_bottom = -200.0
+scale = Vector2(2, 2)
+mouse_default_cursor_shape = 10
+value = 50.0
+
+[node name="VSquareButton" type="Sprite2D" parent="."]
+top_level = true
+position = Vector2(1025, 540)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("5_327lw")
+
+[node name="Button" type="Button" parent="VSquareButton"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+flat = true
+script = ExtResource("7_v3pb3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.03
+anchor_top = 0.041
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.56
+offset_top = 1.432
+offset_right = -19.0
+offset_bottom = -27.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.482353)
+
+[connection signal="pressed" from="BackSquareButton/Button" to="BackSquareButton/Button" method="_on_pressed"]
+[connection signal="pressed" from="VSquareButton/Button" to="VSquareButton/Button" method="_on_pressed"]

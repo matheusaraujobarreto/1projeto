@@ -1,0 +1,168 @@
+[gd_scene load_steps=7 format=3 uid="uid://c78yn7wj24vcu"]
+
+[ext_resource type="Texture2D" uid="uid://ddy2gubrt68jc" path="res://art/Background Screen.png" id="1_1jt1q"]
+[ext_resource type="Texture2D" uid="uid://d1yx47l0xxykr" path="res://art/Player 1 Spritesheet.png" id="2_7drdy"]
+[ext_resource type="Texture2D" uid="uid://clx7jsq8h2xtm" path="res://art/Player 2 Spritesheet.png" id="3_y0rmw"]
+[ext_resource type="Texture2D" uid="uid://b74rjamq1g6ia" path="res://art/Player 3 Spritesheet.png" id="4_nosl7"]
+[ext_resource type="Texture2D" uid="uid://cl145xa2eqaae" path="res://art/Player 4 Spritesheet.png" id="5_aqkg3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ywy7d"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchor_right = 1.667
+anchor_bottom = 1.667
+offset_top = 1.0
+offset_right = -770.384
+offset_bottom = -432.216
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundScreen" type="Sprite2D" parent="."]
+position = Vector2(579.5, 322.5)
+scale = Vector2(0.603646, 0.600926)
+texture = ExtResource("1_1jt1q")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06
+anchor_top = 0.089
+anchor_right = 0.224
+anchor_bottom = 0.92
+offset_left = 0.799995
+offset_top = -0.120003
+offset_right = 0.919983
+offset_bottom = 0.399963
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.482353)
+
+[node name="Label" type="Label" parent="ColorRect"]
+modulate = Color(1, 0.785187, 0.689045, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.307
+offset_right = -93.72
+offset_bottom = -82.2203
+scale = Vector2(2, 2)
+text = "Player 1"
+label_settings = SubResource("LabelSettings_ywy7d")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.789
+anchor_top = 0.089
+anchor_right = 0.953
+anchor_bottom = 0.92
+offset_left = 0.119873
+offset_top = -0.120003
+offset_right = 0.239868
+offset_bottom = 0.399963
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.482353)
+
+[node name="Label" type="Label" parent="ColorRect2"]
+modulate = Color(1, 0.952281, 0.349257, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.307
+offset_right = -93.72
+offset_bottom = -82.2203
+scale = Vector2(2, 2)
+text = "Player 4"
+label_settings = SubResource("LabelSettings_ywy7d")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.555
+anchor_top = 0.089
+anchor_right = 0.719
+anchor_bottom = 0.92
+offset_left = 0.400024
+offset_top = -0.120003
+offset_right = 0.519897
+offset_bottom = 0.399963
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.482353)
+
+[node name="Label" type="Label" parent="ColorRect3"]
+modulate = Color(0.711846, 1, 0.445079, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.307
+offset_right = -93.72
+offset_bottom = -82.2203
+scale = Vector2(2, 2)
+text = "Player 3"
+label_settings = SubResource("LabelSettings_ywy7d")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.302
+anchor_top = 0.089
+anchor_right = 0.466
+anchor_bottom = 0.92
+offset_left = 0.159973
+offset_top = -0.120003
+offset_right = 0.279968
+offset_bottom = 0.399963
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.482353)
+
+[node name="Label" type="Label" parent="ColorRect4"]
+modulate = Color(0.05, 0.905, 1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.307
+offset_right = -93.72
+offset_bottom = -82.2203
+scale = Vector2(2, 2)
+text = "Player 2"
+label_settings = SubResource("LabelSettings_ywy7d")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Player1" type="Sprite2D" parent="."]
+position = Vector2(168, 492)
+texture = ExtResource("2_7drdy")
+hframes = 4
+vframes = 4
+
+[node name="Player2" type="Sprite2D" parent="."]
+position = Vector2(441, 487)
+texture = ExtResource("3_y0rmw")
+hframes = 4
+vframes = 4
+
+[node name="Player3" type="Sprite2D" parent="."]
+position = Vector2(731, 492)
+texture = ExtResource("4_nosl7")
+hframes = 4
+vframes = 4
+
+[node name="Player4" type="Sprite2D" parent="."]
+position = Vector2(996, 489)
+texture = ExtResource("5_aqkg3")
+hframes = 4
+vframes = 4
